@@ -1,25 +1,46 @@
 export { UserName }
 
-const questions = ["q1", "q2", "q3", "q4", "q5"];
-const answers = ["a1", "a2", "a3", "a4", "a5"];
 
 class  UserName {
   constructor(username) {
     this.userName = username;
     this.currentScore = 0;
+    let listA = ["q1", "q2", "q3", "q4", "q5"];
+    let listB = ["a1", "a2", "a3", "a4", "a5"];
   }
   randomGenerator() {
-    return Math.floor(Math.random()*questions.length);
+    let listA = ["q1", "q2", "q3", "q4", "q5"];
+    // let listB = ["a1", "a2", "a3", "a4", "a5"];
+    return Math.floor(Math.random()*listA.length);
   }
   newQuestion() {
     let flashCard = [];
-    let newQuestion = randomGenerator();
-    flashCard.push(questions[newQuestion - 1]);
-    flashCard.push(answers[newQuestion - 1]);
-    //now loop for false answers
+    let newQuestion = this.randomGenerator();
+    flashCard.push(this.listA[newQuestion]);
+    flashCard.push(this.listB[newQuestion]);
+    // flashCard.push(this.listB[newQuestion]);
+    // flashCard.push(this.listB[newQuestion + 1]);
+    // flashCard.push(this.listB[newQuestion + 2]);
+
+    //now loop for false listB
     return flashCard;
+
   }
-};
+}
+
+
+
+let test = new UserName("john");
+console.log(test.newQuestion());
+test.newQuestion();
+
+console.log(listA[1]);
+
+
+
+
+// let testBuild = new UserName("Everett");
+// let showMe = testBuild.newQuestion();
 
 
 // class FlashGame {
