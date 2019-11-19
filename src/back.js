@@ -1,6 +1,7 @@
-// export { FlashGame }
-
 export { UserName }
+
+const questions = ["q1", "q2", "q3", "q4", "q5"];
+const answers = ["a1", "a2", "a3", "a4", "a5"];
 
 class  UserName {
   constructor(username) {
@@ -10,14 +11,19 @@ class  UserName {
   randomGenerator() {
     return Math.floor(Math.random()*questions.length);
   }
-
+  newQuestion() {
+    let flashCard = [];
+    let newQuestion = randomGenerator();
+    flashCard.push(questions[newQuestion - 1]);
+    flashCard.push(answers[newQuestion - 1]);
+    //now loop for false answers
+    return flashCard;
+  }
 };
-const questions = ["q1", "q2", "q3", "q4", "q5"];
 
 
 // class FlashGame {
 //
-//   const answers = ["a1", "a2", "a3", "a4", "a5"];
 //   let wrongAnswerArray = [];
 //
 //

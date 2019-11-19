@@ -1,4 +1,4 @@
-import { FlashGame } from './back.js';
+import { UserName } from './back.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,5 +10,6 @@ $(document).ready(function(){
     event.preventDefault();
     const username = $('#intake').val();
     $(".nameDisplay").text(username);
+    
   });
 });
