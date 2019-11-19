@@ -21,7 +21,7 @@ class  UserName {
     // flashCard.push(this.listB[newQuestion + 2]);
 
     //now loop for false listB
-    return this.flashCard;
+    return flashCard;
   }
 }
 
