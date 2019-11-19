@@ -10,8 +10,8 @@ $(document).ready(function(){
     event.preventDefault();
     const username = $('#intake').val();
     $(".nameDisplay").text(username);
-    let currentPlayer = new UserName(username);
-    currentPlayer.newQuestion();
-    $(".cardDisplay").text(flashCard);
+    let card = new UserName(username);
+    let card2 = card.newQuestion();
+    $("#cardDisplay").text(card.flashCard);
   });
 });

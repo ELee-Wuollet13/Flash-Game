@@ -7,13 +7,14 @@ class  UserName {
     this.currentScore = 0;
     this.listA = ["q1", "q2", "q3", "q4", "q5"];
     this.listB = ["a1", "a2", "a3", "a4", "a5"];
+    this.flashCard = [];
   }
   randomGenerator() {
     return Math.floor(Math.random()*this.listA.length);
   }
   newQuestion() {
-    let flashCard = [];
     let newQuestion = this.randomGenerator();
+    console.log(newQuestion);
     this.flashCard.push(this.listA[newQuestion]);
     this.flashCard.push(this.listB[newQuestion]);
     // flashCard.push(this.listB[newQuestion]);
@@ -21,8 +22,9 @@ class  UserName {
     // flashCard.push(this.listB[newQuestion + 2]);
 
     //now loop for false listB
-    return flashCard;
+    return this.flashCard;
   }
+
 }
 
 
