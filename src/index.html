@@ -5,19 +5,38 @@
   <title></title>
 </head>
 <body>
+  <h1>FlashGame!</h1>
+  <ol> Rules:
+    <li>Enter your name to start the game</li>
+    <li>Answer the method questions within the time limit to score points</li>
+  </ol>
+
   <form id="user" action="index.html" method="post">
     <input type="text" id="intake">
     <button type="submit" name="button">Submit</button>
   </form>
-    <span class="nameDisplay"></span>
-    <form id="card" action="index.html" method="post">
+
+  <h3 class="onSubmit">Welcome user:</h3>
+  <p class="onSubmit"><span class="nameDisplay"></span> please select the answer that best fits the Javascript Method shown:</p>
+  <h2 class="onSubmit"><span id="outputScore"></span></h2>
+
+  <form id="card" class="onSubmit" action="index.html" method="post">
+    <div class="jumbotron">
       <div id="cardDisplay">
-        <span id="question"></span>
-        <button type="radio" class="radio1" name="button"><span id="question1"></span></button>
-        <button type="radio" class="radio2" name="button"><span id="question2"></span></button>
-        <button type="radio" class="radio3" name="button"><span id="question3"></span></button>
-        <button type="radio" class="radio4" name="button"><span id="question4"></span></button>
+        <p class="onSubmit">The method <span id="question"></span>:</p><br>
+        <input type="radio" class="radio1" name="radio1" value="1"></button>
+        <span id="question1"></span><br>
+
+        <input type="radio" class="radio1" name="radio1" value="2"></button>
+        <span id="question2"></span><br>
+
+        <input type="radio" class="radio1" name="radio1" value="3"></button>
+        <span id="question3"></span><br><br>
+
+        <button type="click" name="button">Submit answer</button>
+      </div>
     </div>
   </form>
+
 </body>
 </html>
